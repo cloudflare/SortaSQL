@@ -1,0 +1,46 @@
+
+SortaSQL
+
+An extension to PostgreSQL allowing Kyoto Cabinets to be used as a backing data store.
+Currently very customized for CloudFlare's usage pattern of online log analysis.
+
+Install
+
+Update the paths in common.h
+
+protoc-c --c_out=c entry.proto
+protoc --cpp_out=cpp entry.proto	
+make
+sudo make install
+
+About
+
+Google has BigTable and GFS.
+Facebook has HBase and Cassandra.
+And then there's the up and coming set of Membase, CouchDB, MongoDB, and so on and so forth.
+
+These all scale by eliminating flexibility, presenting a user with a key-value interface where keys are ordered to allow efficient iteration.
+But by throwing out the relational part of a relational database, you loose a lot of value and flexibility in looking at data, not to
+mention all of the nice language bindings that old school RDBMs have.
+Compounding this, NoSQL DBs are also all new, all have bugs, and no one has that much experience managing them.
+Its a brave new world out there.
+
+At CloudFlare, we spent quite a while evaluating different NoSQL solutions.
+We were looking for a reliable and cheap way to store Big Data down the road, while storing Medium Data right now.
+We need to be able to scale with one technology, going from a single machine to two machines, to four and so on to full on a cluster.
+The catch is we don't want to buy that cluster right now.
+
+We messed with HBase and Hive in particular, but weren't able to get reliable performance from these while running on a scaled down infrastructure.
+For a while then we fell back on Postgres, but pretty soon this was showing signs of creaking under the load.
+But we still weren't ready to make the jump to a big rack full of servers.
+
+Needing a middle ground, we created a hybrid model using both SQL and noSQL technologies.
+In our existing Postgres DB, we created a custom data type which acts as a pointer into an embedded Kyoto Cabinet DB.
+Kyoto Cabinet is a collection of C functions which allow lookup and sets into a simple data file containing records, each of these consisting of a key/value pair.
+Adding a few functions and operators to Postgres allows searching of these KC files both using Postgres's explicit indexes and KC's implicit indexes (keys are ordered and can be stored via a B-Tree).
+Storing values serialized using Google's Protocol Buffers allows complex structures to be added as values, while not needing much diskspace.
+
+See also:
+
+http://www.postgresql.org/
+http://fallabs.com/kyotocabinet/

@@ -1,0 +1,21 @@
+package cloudflare;
+
+message ZoneTimeBucket {
+  
+  message Counter {
+    required string key           = 1;
+    required int64  value         = 2;
+  }
+
+  required string map_name            = 1;
+  required string classification      = 2;      
+  required string doctype             = 3;
+  required string pop                 = 4;
+  required string psource             = 5;
+  required string result_id           = 6;
+  required string db_key              = 7;
+  required string db_path             = 8;
+  optional string kv_map_file         = 9; // If not null, use the kv_map within, not #10
+  repeated Counter map_entry          = 10; // Use a built in list of counters?
+
+}
