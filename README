@@ -20,7 +20,7 @@ Facebook has HBase and Cassandra.
 And then there's the up and coming set of Membase, CouchDB, MongoDB, and so on and so forth.
 
 These all scale by eliminating flexibility, presenting a user with a key-value interface where keys are ordered to allow efficient iteration.
-But by throwing out the relational part of a relational database, you loose a lot of value and flexibility in looking at data, not to
+But by throwing out the relational part of a relational database, you lose a lot of value and flexibility in looking at data, not to
 mention all of the nice language bindings that old school RDBMs have.
 Compounding this, NoSQL DBs are also all new, all have bugs, and no one has that much experience managing them.
 Its a brave new world out there.
