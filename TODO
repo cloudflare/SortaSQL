@@ -1,0 +1,15 @@
+Features which need to be worked on:
+
+* Working symetrical functions to support the PG callback functions input, output, receive, send.
+
+Right now all input runs via the bulk uploader. It would be good to enable adding data via the PG interface. 
+This includes the text based input/output functions (symetrical here means that output from output() can be fed right back to input()),
+and their binary equivalents recieve/send.
+
+* Support for INSERT, UPDATE statements.
+
+* Smarter sharding/replication layer, moving data at the KC/PG level across boxes rather than at the user level.
+
+* Possible integration with a caching filesystem (http://en.gentoo-wiki.com/wiki/CacheFS) to imporve performance.
+
+* More examples.
