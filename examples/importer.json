@@ -1,0 +1,13 @@
+{ 
+  "AGG_MAP_BASE":"/tmp/",
+  "LOG_MERGE_DELETE":"/mnt/logs/kyoto/merge_del.kch",
+  "LOG_MERGE_AGG":"/mnt/logs/kyoto/merge_agg.kch",
+  "LOG_MERGE_MAP":"/mnt/logs/kyoto/merge_map.kch",
+  "LOG_MERGE_IPS":"/mnt/logs/kyoto/merge_ips.kch",
+  "OWNER_ID_DIR":"/mnt/logs/kyoto/owners",
+  "SQL_FILE_DIR":"/logger/outgoing/sql",
+  "SQL_FILE_EXTRA_NEW_DIR":"/logger/outgoing/sql_new",
+  "TMP_FILE_DIR":"/mnt/logs/tmp",
+  "SQL_NEW_FILE_DIR":"/mnt/logs/sql",
+  "MERGE_LOCK_FILE":"/tmp/merge.lock"
+}

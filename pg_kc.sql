@@ -1,4 +1,4 @@
-
+CREATE LANGUAGE plpgsql;
 CREATE TYPE kc_row;
 
 DROP FUNCTION kc_row_in(cstring) CASCADE;
@@ -132,8 +132,3 @@ CREATE FUNCTION kcd (text, text, text array)
     RETURNS bigint
     AS 'libpg_kc', 'kc_delete'
     LANGUAGE C STABLE STRICT;
-
--- @TODO -- Put anything more here?
-CREATE TABLE cf_logs_map_types (
-    map_name      varchar(256)
-);
