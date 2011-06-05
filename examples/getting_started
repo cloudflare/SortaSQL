@@ -1,13 +1,13 @@
 
 Sample Project #1 (log processing)
 
-Take the data defined in input.sql, add it to a SortaSQL DB, then query the data.
+Take the data defined in data.sql, add it to a SortaSQL DB, then query the data.
 
 1) Compile and install the code as shown in the README file. You will first want to look in common.h, setting file paths.
 You should now have the library pg_kc.so installed 
 
-2) In Postgres, run the files pg_kc.sql and helper.sql. Make sure that you don't get any errors.
-You should now have a number of functions definined in Postgres, including get_page_views(). Look at the definition of this function (in helper.sql) to get a sense of how to access data.
+2) In Postgres, run the files pg_kc.sql and helper.sql. (\. path/to/file.sql) Make sure that you don't get any errors.
+You should now have a number of functions definined in Postgres, including get_page_views(). Look at the definition of this function (in helper.sql) to get a sense of how to access SortaSQL rows.
 
 3) Compile import_data.cc
 g++ import_data.cc -o import_data ../cpp/entry.pb.cc -I../ -ljson_linux-gcc-4.4.4_libmt -lboost_iostreams -lpcrecpp -lkyotocabinet -lprotobuf
