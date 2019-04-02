@@ -55,7 +55,7 @@ static const pcrecpp::RE CF_START_TIME_DUMP_RE("(.*?) (.*)");
 static const pcrecpp::RE CF_RID_RE("^(.*?)\\s");
 static const pcrecpp::RE CF_ALL_RE("(.*?)\\s");
 
-// And how fields are seperated. 
+// And how fields are separated. 
 typedef boost::tokenizer<boost::char_separator<char> > tokenizer;
 static boost::char_separator<char> CF_MAP_SEP("\t");
 
