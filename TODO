@@ -4,7 +4,7 @@ Features which need to be worked on:
 
 Right now all input runs via the bulk uploader. It would be good to enable adding data via the PG interface. 
 This includes the text based input/output functions (symetrical here means that output from output() can be fed right back to input()),
-and their binary equivalents recieve/send.
+and their binary equivalents receive/send.
 
 * Support for INSERT, UPDATE statements.
 
