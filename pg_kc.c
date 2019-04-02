@@ -795,7 +795,7 @@ Datum kc_shrink(PG_FUNCTION_ARGS) {
 #ifdef CF_DUBUG
     ereport(NOTICE,
             (errcode(ERRCODE_FEATURE_NOT_SUPPORTED),
-             errmsg("saving: num map entries: %zu -- writting with %d keys", msg.n_map_entry, num_new_keys)));
+             errmsg("saving: num map entries: %zu -- writing with %d keys", msg.n_map_entry, num_new_keys)));
 #endif
 
     // Save the updated buffer.

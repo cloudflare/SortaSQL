@@ -3,7 +3,7 @@
 
    Read in a merged sql dump file.
    Write the sql file to postgres.
-   Strip out the k/v info, instead writting this info directly into KC.
+   Strip out the k/v info, instead writing this info directly into KC.
 
    @author ian@cloudflare.com
 */
