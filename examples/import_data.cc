@@ -547,7 +547,7 @@ inline void close_dbs(PolyDB &deldb, PolyDB &aggdb, PolyDB &mapdb, PolyDB &ip_de
 int main(int argc, char** argv) {
 
     const char      *config_file = "importer.json";
-    const char      *lock_file = "/tmp/import.LOCK"; // This is importent.
+    const char      *lock_file = "/tmp/import.LOCK"; // This is important.
     int             c;
     struct stat     path_buf;
     string          current_file;
