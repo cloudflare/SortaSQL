@@ -114,7 +114,7 @@ CREATE OR REPLACE FUNCTION kcx(IN text, IN text, IN text, IN text, IN text, IN t
     LANGUAGE C STABLE STRICT;
 
 /**
-    Given the fixed values, writes (overrites) the kc entry.
+    Given the fixed values, writes (overwrites) the kc entry.
     map_name, start_time, new rid, array of rids, class, doctype, pop, psource
     returns new kcid.
 */
