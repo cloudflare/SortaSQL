@@ -353,7 +353,7 @@ int handle_map_merge(map<string, PolyDB *> &dbs, Json::Value &config,
 
         //cout << "Reusing" << endl;
 
-        // Clearing old values and reseting based on kc info from the merge.
+        // Clearing old values and resetting based on kc info from the merge.
         if (msg.has_kv_map_file()) {
             
             open_kv_db(current_map_kv, msg, db_open);            
@@ -391,7 +391,7 @@ int handle_map_merge(map<string, PolyDB *> &dbs, Json::Value &config,
             // Remove the old info from the map.
             msg.clear_map_entry();
             if (msg.ParseFromString(msg_value)) {   
-                // Clearing old values and reseting based on kc info from the merge.
+                // Clearing old values and resetting based on kc info from the merge.
                 if (msg.has_kv_map_file()) {
                     
                     //cout << "Opening" << msg.kv_map_file() << endl;
