@@ -1,6 +1,6 @@
 /**
 
-Copywrite 2011 CloudFlare, Inc.
+Copyright 2011 CloudFlare, Inc.
 @author Ian Pye <ian@cloudflare.com>
 
 Provides a bridge from PostgreSQL to Kyoto Cabinet.
