@@ -7,7 +7,7 @@ Take the data defined in data.sql, add it to a SortaSQL DB, then query the data.
 You should now have the library pg_kc.so installed 
 
 2) In Postgres, run the files pg_kc.sql and helper.sql. (\. path/to/file.sql) Make sure that you don't get any errors.
-You should now have a number of functions definined in Postgres, including get_page_views(). Look at the definition of this function (in helper.sql) to get a sense of how to access SortaSQL rows.
+You should now have a number of functions defined in Postgres, including get_page_views(). Look at the definition of this function (in helper.sql) to get a sense of how to access SortaSQL rows.
 
 3) Compile import_data.cc
 g++ import_data.cc -o import_data ../cpp/entry.pb.cc -I../ -ljson_linux-gcc-4.4.4_libmt -lboost_iostreams -lpcrecpp -lkyotocabinet -lprotobuf
