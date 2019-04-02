@@ -10,6 +10,6 @@ and their binary equivalents recieve/send.
 
 * Smarter sharding/replication layer, moving data at the KC/PG level across boxes rather than at the user level.
 
-* Possible integration with a caching filesystem (http://en.gentoo-wiki.com/wiki/CacheFS) to imporve performance.
+* Possible integration with a caching filesystem (http://en.gentoo-wiki.com/wiki/CacheFS) to improve performance.
 
 * More examples.
