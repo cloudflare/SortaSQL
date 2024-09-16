@@ -1,6 +1,6 @@
 /**
 
-Copywrite 2011 CloudFlare, Inc.
+Copyright 2011 CloudFlare, Inc.
 @author Ian Pye <ian@cloudflare.com>
 
 Provides a bridge from PostgreSQL to Kyoto Cabinet.
@@ -434,7 +434,7 @@ Datum kc_expand(PG_FUNCTION_ARGS) {
              errmsg("Done? %d -- next buf -- %d", done, search->next_map)));   
 #endif
 
-    // Take the next itteration over the cursor. If the next is NULL or else not matching the resultid passed in
+    // Take the next iteration over the cursor. If the next is NULL or else not matching the resultid passed in
     // End. Otherwise, parse the value, populating the next row of the returning tuple.
     if (!done) {
         KC_ROW                          *out;
@@ -795,7 +795,7 @@ Datum kc_shrink(PG_FUNCTION_ARGS) {
 #ifdef CF_DUBUG
     ereport(NOTICE,
             (errcode(ERRCODE_FEATURE_NOT_SUPPORTED),
-             errmsg("saving: num map entries: %zu -- writting with %d keys", msg.n_map_entry, num_new_keys)));
+             errmsg("saving: num map entries: %zu -- writing with %d keys", msg.n_map_entry, num_new_keys)));
 #endif
 
     // Save the updated buffer.

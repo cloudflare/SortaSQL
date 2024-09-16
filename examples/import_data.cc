@@ -3,7 +3,7 @@
 
    Read in a merged sql dump file.
    Write the sql file to postgres.
-   Strip out the k/v info, instead writting this info directly into KC.
+   Strip out the k/v info, instead writing this info directly into KC.
 
    @author ian@cloudflare.com
 */
@@ -55,7 +55,7 @@ static const pcrecpp::RE CF_START_TIME_DUMP_RE("(.*?) (.*)");
 static const pcrecpp::RE CF_RID_RE("^(.*?)\\s");
 static const pcrecpp::RE CF_ALL_RE("(.*?)\\s");
 
-// And how fields are seperated. 
+// And how fields are separated. 
 typedef boost::tokenizer<boost::char_separator<char> > tokenizer;
 static boost::char_separator<char> CF_MAP_SEP("\t");
 
@@ -353,7 +353,7 @@ int handle_map_merge(map<string, PolyDB *> &dbs, Json::Value &config,
 
         //cout << "Reusing" << endl;
 
-        // Clearing old values and reseting based on kc info from the merge.
+        // Clearing old values and resetting based on kc info from the merge.
         if (msg.has_kv_map_file()) {
             
             open_kv_db(current_map_kv, msg, db_open);            
@@ -391,7 +391,7 @@ int handle_map_merge(map<string, PolyDB *> &dbs, Json::Value &config,
             // Remove the old info from the map.
             msg.clear_map_entry();
             if (msg.ParseFromString(msg_value)) {   
-                // Clearing old values and reseting based on kc info from the merge.
+                // Clearing old values and resetting based on kc info from the merge.
                 if (msg.has_kv_map_file()) {
                     
                     //cout << "Opening" << msg.kv_map_file() << endl;
@@ -547,7 +547,7 @@ inline void close_dbs(PolyDB &deldb, PolyDB &aggdb, PolyDB &mapdb, PolyDB &ip_de
 int main(int argc, char** argv) {
 
     const char      *config_file = "importer.json";
-    const char      *lock_file = "/tmp/import.LOCK"; // This is importent.
+    const char      *lock_file = "/tmp/import.LOCK"; // This is important.
     int             c;
     struct stat     path_buf;
     string          current_file;
